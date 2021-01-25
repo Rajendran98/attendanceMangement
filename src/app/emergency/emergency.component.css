@@ -1,0 +1,5 @@
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    p{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,347 @@
+
+
+ 
+<div class="set">
+<h4>Settings</h4>
+
+<mat-card (click) ="opennetwork()">Network<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+<mat-divider></mat-divider>
+<mat-card (click) ="opendevice()">Connect Devices<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+<mat-divider></mat-divider>
+<mat-card (click) = "openconfig()">Configuration<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+   
+<br>
+<!--
+<mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Wi-Fi Connection
+            </mat-panel-title>
+         
+          </mat-expansion-panel-header>
+
+          <div fxLayout="row">
+            <div fxFlex="70%">
+              <h4>Wireless</h4>
+              <h4>Signal Strength : </h4>
+              <h4>Security Type : </h4>
+              <h4>Network Band :</h4>
+            </div>
+            <div fxFlex="30%">
+           <br>
+              <button mat-raised-button  color="primary">
+                Disconnect
+            </button>
+            <br>
+            <br>
+            <button mat-raised-button  color="primary">
+              &nbsp; Forget &nbsp;
+          </button>
+            </div>
+          </div> 
+          <div fxLayout="row">
+            <div fxFlex="70%">
+              <h4>FlyWire</h4>
+              <p>WPA2 PSK</p>
+            
+            </div>
+            <div fxFlex="30%">
+            
+            
+          
+            <button mat-raised-button  color="primary">
+              Connect
+          </button>
+            </div>
+          </div> 
+          <h4>Guest</h4>
+          <p>Unsecured</p>
+
+          <h4>See All Networks</h4>
+
+      
+        </mat-expansion-panel>
+        
+        <mat-expansion-panel >
+          <mat-expansion-panel-header style="background-color: white;">
+            <mat-panel-title>
+                IP Address
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <div class="panel">
+            <br>
+          <form #ipForm="ngForm" style="width:100%;height:100%; text-align: center;">
+              <div>
+                  <mat-form-field appearance="outline"  >
+                      <mat-label >IP Address</mat-label>
+                      <input matInput  name="ipaddress" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="ipaddress" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >Subnet Mask</mat-label>
+                      <input matInput  name="subnet" placeholder="Subnet Mask" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="subnet" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >Gateway</mat-label>
+                      <input matInput  name="gateway" placeholder="Gateway" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="gateway" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >Mac Address</mat-label>
+                      <input matInput  name="macaddress" placeholder="Mac Address" ngModel  [(ngModel)]="macaddress" required>
+      
+                  </mat-form-field>
+              </div>
+              <button mat-raised-button  (click)="onClicking(ipForm)" color="primary">
+                  Save
+              </button>
+
+          </form>
+       </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                FTP Site
+              </mat-panel-title>
+             
+            </mat-expansion-panel-header>
+          
+           <div class="panel">
+            <br>
+          <form #ftpForm="ngForm" style="width:100%;height:100%; text-align: center;">
+              <div>
+                  <mat-form-field appearance="outline"  >
+                      <mat-label >IP Address of FTP Machine</mat-label>
+                      <input matInput  name="ipaddressftp" placeholder="IP Address FTP Machine" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="ipaddressftp" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >Port</mat-label>
+                      <input matInput  name="port" placeholder="Port" ngModel  [(ngModel)]="port" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >User Id</mat-label>
+                      <input matInput  name="userid" placeholder="User Id" ngModel  [(ngModel)]="userid" required>
+      
+                  </mat-form-field>
+              </div>
+              <div>
+                  <mat-form-field appearance="outline" >
+                      <mat-label >Password</mat-label>
+                      <input matInput type="password" name="password" placeholder="Password" ngModel  [(ngModel)]="password" required>
+      
+                  </mat-form-field>
+              </div>
+              <button mat-raised-button   color="primary">
+                  Save
+              </button>
+
+          </form>
+       </div>
+           
+          </mat-expansion-panel>
+          <h4>Connect Devices</h4>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Clustered SecqurIN device
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of ClusterArray let index as index">
+              <div fxLayout="row">
+                <div fxFlex="70%">
+                  <h4>{{item.cluster_device}}</h4>
+                  <h4>Device Name : {{item.cluster_ip}}</h4>
+                  <h4>Mac Address : </h4>
+                </div>
+                <div fxFlex="30%">
+                  <br>
+                  <button mat-raised-button (click)="onRemoveCluster(index)" color="primary">
+                    Remove
+                </button>
+                </div>
+              </div> 
+              <hr>
+               
+           
+        
+            </div>
+        
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Access control device
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of AccessArray let index as index">
+              <div fxLayout="row">
+                <div fxFlex="70%">
+                  <h4>Device Type : {{item.access_devicetype}}</h4>
+                  <h4>Device Name : {{item.access_devicename}}</h4>
+                  <h4>Mac Address : {{item.access_macaddress}}</h4>
+                </div>
+                <div fxFlex="30%">
+                  <br>
+                  <button mat-raised-button (click)="onRemove(index)" color="primary">
+                    Remove
+                </button>
+                </div>
+              </div> 
+              <hr>
+               
+           
+        
+            </div>
+            
+
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+               Add SecqurIN device to Cluster
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+            <div class="panel">
+                <br>
+              <form #clusterForm="ngForm" style="width:100%;height:100%; text-align: center;">
+                  <div>
+                      <mat-form-field appearance="outline"  >
+                          <mat-label >IP Address</mat-label>
+                          <input matInput  name="cluster_ip" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="cluster_ip" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >Device Name</mat-label>
+                          <input matInput  name="cluster_device" placeholder="Device Name" ngModel  [(ngModel)]="cluster_device" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >User Id</mat-label>
+                          <input matInput  name="cluster_userid" placeholder="User Id" ngModel  [(ngModel)]="cluster_userid" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >Password</mat-label>
+                          <input matInput type="password" name="cluster_password" placeholder="Password" ngModel  [(ngModel)]="cluster_password" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <button mat-raised-button  (click)="Cluster(clusterForm)" color="primary">
+                      Save
+                  </button>
+    
+              </form>
+           </div>
+        
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Add Access control device
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+            <div class="panel">
+                <br>
+              <form #accessForm="ngForm" style="width:100%;height:100%; text-align: center;">
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >Mac Address</mat-label>
+                          <input matInput name="access_macaddress" placeholder="Mac Address" ngModel   [(ngModel)]="access_macaddress" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >Device Name</mat-label>
+                          <input matInput  name="access_devicename" placeholder="Device Name" ngModel  [(ngModel)]="access_devicename" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field appearance="outline" >
+                        <mat-label >Device Type</mat-label>
+                        <input matInput  name="access_devicetype" placeholder="Device Type" ngModel  [(ngModel)]="access_devicetype" required>
+        
+                    </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >User Id</mat-label>
+                          <input matInput  name="access_userid" placeholder="User Id" ngModel  [(ngModel)]="access_userid" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <div>
+                      <mat-form-field appearance="outline" >
+                          <mat-label >Password</mat-label>
+                          <input matInput type="password" name="access_password" placeholder="Password" ngModel  [(ngModel)]="access_password" required>
+          
+                      </mat-form-field>
+                  </div>
+                  <button mat-raised-button (click)="Access(accessForm)"  color="primary">
+                      Save
+                  </button>
+    
+              </form>
+           </div>
+        
+          </mat-expansion-panel>
+          <h4>Configuration</h4>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Temperature
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+           
+            Temperature Reading is : {{isChecked ? 'Enable' : 'Disable'}}
+          
+            <mat-slide-toggle color="primary"   class="ten"  [(ngModel)]="isChecked"></mat-slide-toggle>
+       
+            <br>
+            <br>
+            Temperature Reading in : {{temp ? '°F' : '°C'}}
+            <mat-slide-toggle color="primary" class="ten1" [(ngModel)]="temp"></mat-slide-toggle>
+        </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Screening Type
+              </mat-panel-title>
+           
+            </mat-expansion-panel-header>
+            Screening Type is : {{screening ? 'Only For Authorized People' : 'For Everyone'}}
+          
+            <mat-slide-toggle color="primary"   class="ten"  [(ngModel)]="screening"></mat-slide-toggle>
+        
+          </mat-expansion-panel>
+
+      </mat-accordion>-->
+</div>

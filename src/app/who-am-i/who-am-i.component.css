@@ -1,0 +1,32 @@
+.who{
+    width: 75%;
+    position: relative;
+    left: 20%;
+}
+
+mat-button-toggle {
+   
+
+    width: auto;
+    height: 40px;
+  
+    font-size: 14px;
+  
+}
+
+.mat-button-toggle-checked{
+    background-color: #2979FF;
+    color: white;
+  }
+  .btn{
+    float: left;
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .who{
+        width: 100%;
+        position: relative;
+        left: 0%;
+    }
+}

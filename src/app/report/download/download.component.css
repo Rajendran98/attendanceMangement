@@ -1,0 +1,29 @@
+
+table, th, td {
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  th{
+      background-color: skyblue;
+  }
+  table{
+      width: 50%;
+    text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  button{
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  @media only screen and (min-width: 280px) and (max-width: 599px) {
+      table{
+          width: 100%;
+          height: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+      }
+  }

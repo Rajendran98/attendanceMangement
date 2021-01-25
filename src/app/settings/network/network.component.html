@@ -1,0 +1,95 @@
+<button mat-raised-button color="primary" (click)="goBack()" style="margin-top: 5px;">Back</button>
+<!--
+<div class="set">
+<mat-card (click)="openwifi()">Wi-Fi Connection<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+<mat-divider></mat-divider>
+<mat-card (click)="openip()">IP Address<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+<mat-divider></mat-divider>
+<mat-card (click)="openftp()">FTP Site<mat-icon style="float: right; vertical-align: middle; color: gray;">arrow_right_alt</mat-icon></mat-card>
+</div>-->
+<form #ipForm="ngForm">
+<div>
+    <h3 style="text-align: center;">IP Address</h3>
+</div>
+<div class="set">
+   
+<div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline"  >
+            <mat-label >IP Address</mat-label>
+            <input matInput  name="ipaddress" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="ipaddress" required>
+
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >Subnet Mask</mat-label>
+            <input matInput  name="subnet" placeholder="Subnet Mask" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="subnet" required>
+
+        </mat-form-field>
+    </div>    
+</div>  
+<div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >Gateway</mat-label>
+            <input matInput  name="gateway" placeholder="Gateway" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="gateway" required>
+
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >Mac Address</mat-label>
+            <input matInput style="color: aliceblue;" name="macaddress" placeholder="Mac Address" ngModel  [(ngModel)]="macaddress" disabled required>
+
+        </mat-form-field>
+    </div>    
+</div>  
+
+</div>
+
+<div>
+    <h3 style="text-align: center;">FTP Site</h3>
+</div>
+<div class="set">
+   
+<div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline"  >
+            <mat-label >IP Address-FTP</mat-label>
+            <input matInput  name="ipaddressftp" placeholder="IP Address FTP Machine" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="ipaddressftp" required>
+
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >Port</mat-label>
+            <input matInput  name="port" placeholder="Port" ngModel  [(ngModel)]="port" required>
+
+        </mat-form-field>
+    </div>    
+</div>  
+<div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >User Id</mat-label>
+            <input matInput  name="userid" placeholder="User Id" ngModel  [(ngModel)]="userid" required>
+
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" >
+            <mat-label >Password</mat-label>
+            <input matInput type="password" name="password" placeholder="Password" ngModel  [(ngModel)]="password" required>
+
+        </mat-form-field>
+    </div>    
+</div>  
+
+</div>
+<div style="text-align: center;">
+    <button mat-raised-button  (click)="onClicking(ipForm)" color="primary">
+        Save
+    </button>
+</div>
+</form>

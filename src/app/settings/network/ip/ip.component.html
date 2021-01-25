@@ -1,0 +1,35 @@
+<button mat-raised-button color="primary" (click)="goBack()" style="margin-top: 5px;">Back</button>
+<form #ipForm="ngForm" style="width:100%;height:100%; text-align: center; margin-top: 25px;">
+    <div>
+        <mat-form-field appearance="outline"  >
+            <mat-label >IP Address</mat-label>
+            <input matInput  name="ipaddress" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="ipaddress" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Subnet Mask</mat-label>
+            <input matInput  name="subnet" placeholder="Subnet Mask" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="subnet" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Gateway</mat-label>
+            <input matInput  name="gateway" placeholder="Gateway" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="gateway" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Mac Address</mat-label>
+            <input matInput  name="macaddress" placeholder="Mac Address" ngModel  [(ngModel)]="macaddress" required>
+
+        </mat-form-field>
+    </div>
+    <button mat-raised-button  (click)="onClicking(ipForm)" color="primary">
+        Save
+    </button>
+
+</form>

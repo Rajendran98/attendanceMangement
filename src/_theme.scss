@@ -1,0 +1,65 @@
+
+@import "./node_modules/@angular/material/theming";
+
+// @import "../node_modules/nouislider/distribute/nouislider.min.css";
+@include mat-core();
+
+$mat-syqrise: (
+  50: #e3f2fd,
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: #42a5f5,
+  500: #2196f3,
+  600: #1e88e5,
+  700: #000080, //navyblue
+  800: #1565c0,
+  900: #0d47a1,
+  A100: #82b1ff,
+  A200: #448aff,
+  A400: #2979ff,
+  A700: #29b6f6,
+  A500:#d50000,
+  A900:rgba(255, 0, 0, 0.301),
+  A800:white,
+  A1200:#FF8C00,
+  A1000:rgb(255, 106, 106),
+  A1111:rgb(226, 176, 176),
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$app-primary: mat-palette($mat-syqrise, 700);// mat-palette($mat-indigo, 700);
+$app-accent:  mat-palette($mat-syqrise, A700);
+$app-warn:    mat-palette($mat-syqrise,A500);
+$app-waring:mat-palette($mat-syqrise,A900);
+$app-vmswaring:mat-palette($mat-syqrise,A1000);
+$app-reportwaring:mat-palette($mat-syqrise,A1111);
+$app-backdroundtheme:mat-palette($mat-syqrise,A800);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
+
+$dark-primary: mat-palette($mat-syqrise, A1200);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@include angular-material-theme($dark-theme);

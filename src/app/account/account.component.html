@@ -1,0 +1,60 @@
+<div class="page">
+ <br>
+    <form #accountForm="ngForm" >
+        <div>
+            <mat-form-field  appearance="outline">
+               <mat-label >Device Name</mat-label>
+                <input matInput  name="device" placeholder="Device Name" ngModel maxlength="25" [(ngModel)]="device" #dnameControl="ngModel" required >
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field  appearance="outline">
+                <mat-label >Name</mat-label>
+                <input matInput  name="name" placeholder="Name" ngModel maxlength="25" [(ngModel)]="name" #fnameControl="ngModel" required>
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" >
+                <mat-label >Organization</mat-label>
+                <input matInput name="organization" placeholder="Organization" ngModel maxlength="25" [(ngModel)]="organization" #organ="ngModel" required>
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label >Mobile No</mat-label>
+                <input matInput name="mobile" placeholder="Mobile No" ngModel maxlength="25" [(ngModel)]="mobile" #mob="ngModel" required>
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label >Email</mat-label>
+                <input matInput type="email" name="email" placeholder="Email" ngModel maxlength="25" [(ngModel)]="email" #mail="ngModel" required>
+
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" >
+                <mat-label >Password</mat-label>
+                <input matInput type="password" name="password" placeholder="Password" ngModel maxlength="25" [(ngModel)]="password" #pass="ngModel" required>
+
+            </mat-form-field>
+        </div>
+
+        <div style="text-align: center;" *ngIf = "dnameControl.untouched && fnameControl.untouched && organ.untouched && mob.untouched && mail.untouched && pass.untouched">
+            <button mat-raised-button  color="primary">
+                Edit
+            </button>
+        </div>
+
+        <div style="text-align: center;" *ngIf = "dnameControl.touched || fnameControl.touched || organ.touched || mob.touched || mail.touched || pass.touched">
+            <button mat-raised-button (click)="onClicking(accountForm)" color="primary">
+                Submit
+            </button>
+        </div>
+    </form>
+    
+</div>    

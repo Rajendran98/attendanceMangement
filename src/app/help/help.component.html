@@ -1,0 +1,21 @@
+<h3 style="text-align: center;">Help</h3>
+<br>
+<br>
+<div class="who">
+
+    <div *ngFor = "let question of products">
+       
+        <mat-expansion-panel hideToggle style="margin-bottom: 5px;">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>{{question.Q}}</h3>
+              </mat-panel-title>
+            
+            </mat-expansion-panel-header>
+            <h3>{{question.A}}</h3>
+          </mat-expansion-panel>
+    </div>
+    
+  
+   
+</div>

@@ -1,0 +1,13 @@
+.wifi{
+    margin-left: 20%;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .wifi{
+        margin-left: 0%;
+
+    }
+    .btn{
+        font-size: xx-small;
+    }
+}

@@ -1,0 +1,145 @@
+<div class="mainpg">
+<mat-datepicker-toggle matSuffix [for]="picker">
+  <!-- <button mat-icon-button class="IconColor"> -->
+  <mat-icon style="color: orangered;" mat-icon-button matDatepickerToggleIcon>date_range</mat-icon> <!-- </button> -->
+</mat-datepicker-toggle>
+<mat-datepicker style="display: none" #picker></mat-datepicker>
+<input matInput style="width:0; display: none;" 
+ [matDatepicker]="picker" name="fromdate" name="fromdate"  [max]="max"  [(ngModel)]="fromdate">
+
+<mat-slide-toggle color="warn" class="switch" name="table" (change)="onChange(table)"  ngModel [(ngModel)]="table"></mat-slide-toggle>
+<span class="tet">Textual</span>
+<span class="tet1">Graphical</span>
+
+<p class="lead1">{{fromdate | date:'d-MMMM-yyyy'}}
+</p>
+   <div style="position: absolute; right: 2%; top: 0%; margin-top: 5px;">
+    <button mat-raised-button color="warn" class="btn" (click) = "open()">Download</button>
+
+  </div>
+
+  
+
+  <div style="width: 100%;height: 90%;" id="sample">
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="50%"  >
+        <p style="text-align: center;">Daily Attendance by Department</p>
+        <div class="alig">
+          <div id="chart"></div>
+        </div>
+      </div>
+      <div fxFlex="50%" >
+        <br>
+        <br>
+        <br>
+        <div fxLayout="row" style="width: 100%;height: 50%;">
+          <div fxFlex="30%" style="background-color: green; ">
+        <br>
+        <br>
+        <br>
+
+        <h2 style="text-align: center; color: white;">122</h2>
+
+          </div>
+          <div fxFlex="30%" style="background-color: steelblue">
+            <br>
+            <br>
+            <br>
+            
+                    <h2 style="text-align: center; color: white;">50</h2>
+          </div>
+          <div fxFlex="30%" style="background-color: red; ">
+            <br>
+            <br>
+            <br>
+            
+                    <h2 style="text-align: center; color: white;">23</h2>
+          </div>
+
+        </div>  
+        
+      </div>
+    </div>  
+    
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="50%" >
+        <p style="text-align: center;">7 Day Attendance</p>
+        <div id="chart1"></div>
+
+      </div>
+      <div fxFlex="50%" >
+        <p style="text-align: center;">By Designation</p>
+        <div id="chart2"></div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="sample1">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Time</th>
+        <td mat-cell *matCellDef="let element"> {{element.createdAt | date:'HH:mm:ss'}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="empid">
+        <th mat-header-cell *matHeaderCellDef>Emp Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.empid}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="temperature">
+      <th mat-header-cell *matHeaderCellDef>Temperature</th>
+      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    </ng-container>
+
+    
+
+  <ng-container matColumnDef="designation">
+    <th mat-header-cell *matHeaderCellDef>Designation</th>
+    <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="department">
+  <th mat-header-cell *matHeaderCellDef>Department</th>
+  <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+  </ng-container>
+
+    <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef> Location </th>
+        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="shift">
+        <th mat-header-cell *matHeaderCellDef > Shift </th>
+        <td mat-cell *matCellDef="let element"> {{element.shift}} </td>
+    </ng-container>
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>Type</th>
+      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    </ng-container>
+
+ 
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>
+</div>

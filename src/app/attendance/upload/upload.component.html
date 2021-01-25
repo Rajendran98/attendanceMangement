@@ -1,0 +1,26 @@
+<div style="position: absolute; top: 0%; margin-top: 5px; margin-bottom: 5px;">
+    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+</div>
+<div class="classA">
+    <h4>Upload Employee Information
+    </h4>
+</div>
+
+
+<form #empForm="ngForm">
+
+    <div class="classB">
+        <label class="custom-file-upload">
+            <input  type="file" name="files"  accept=".xlsx,.csv" id="myfile" (change)="postMethod($event.target.files)" [(ngModel)]="file" required>
+            <b style="vertical-align: middle;"> Select File&nbsp;</b><mat-icon mat-list-icon style=" vertical-align: middle;">backup</mat-icon>
+        </label>
+
+    </div>
+
+    <div class="classC">
+        <a href="../../../assets/Sample upload file .csv" class="button" download><b>Sample</b></a>
+    </div>
+    <div class="classD">
+        <a type="submit" class="button" (click)="submit()"><b>Upload</b></a>
+    </div>
+</form>

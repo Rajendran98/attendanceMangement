@@ -1,0 +1,134 @@
+<button mat-raised-button color="primary" (click)="goBack()" style="margin-top: 5px;">Back</button>   
+<div class="mainpg">
+ 
+<form #conForm="ngForm">
+    <div fxLayout="row" class="mar" >
+        <div fxFlex="50%">
+            <span>Enable Temperature Reading: </span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="test" [(ngModel)]="temperature" class="btn">
+                <mat-button-toggle value="ON">ON</mat-button-toggle>
+                <mat-button-toggle value="OFF">OFF</mat-button-toggle>
+            
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+   
+    <div fxLayout="row" class="mar">
+        <div fxFlex="50%">
+            <span>Temperature Measure: </span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="measure" [(ngModel)]="measure" class="btn">
+                <mat-button-toggle value="F">°F</mat-button-toggle>
+                <mat-button-toggle value="C">°C</mat-button-toggle>
+            
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+  
+    <div fxLayout="row" class="mar">
+        <div fxFlex="50%">
+            <span>Alert to Manager for Abnormal Temperature: </span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="abnormal" [(ngModel)]="abnormal" class="btn">
+                <mat-button-toggle value="ON">ON</mat-button-toggle>
+                <mat-button-toggle value="OFF">OFF</mat-button-toggle>
+            
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+
+    <div fxLayout="row">
+        <div fxFlex="50%">
+            <span>Temperature abnormality access suspension period (days) </span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" style="width: 50%; height: 3%;">
+              
+                <input matInput type="number" name="periods"  ngModel  [(ngModel)]="periods" required>
+    
+            </mat-form-field>
+        </div>    
+    </div>  
+   
+    <div fxLayout="row" class="mar">
+        <div fxFlex="50%">
+            <span>Restrict to Authorized Personnel Only:</span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="authorized" [(ngModel)]="authorized" class="btn">
+                <mat-button-toggle value="ON">ON</mat-button-toggle>
+                <mat-button-toggle value="OFF">OFF</mat-button-toggle>
+            
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+    
+    <div fxLayout="row" class="mar">
+        <div fxFlex="50%">
+            <span>Attendance Configuration:</span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="attendance_config" [(ngModel)]="attendance_config" class="btn">
+                <mat-button-toggle value="entry">ENTRY</mat-button-toggle>
+                <mat-button-toggle value="exit">EXIT</mat-button-toggle>
+                <mat-button-toggle value="both">BOTH</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+ 
+  <div fxLayout="row" class="mar">
+    <div fxFlex="50%">
+        <span>Usage Type:</span> 
+    </div>
+    <div fxFlex="50%">
+        <mat-button-toggle-group name="usage" [(ngModel)]="usage" class="btn">
+            <mat-button-toggle value="Attendance">ATTENDANCE</mat-button-toggle>
+            <mat-button-toggle value="Screening">SCREENING</mat-button-toggle>
+        
+        </mat-button-toggle-group>
+    </div>    
+</div>  
+
+    <div fxLayout="row">
+        <div fxFlex="50%">
+            <span>Alert to respondent for Temp abnormality for non-employees </span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" style="width: 50%;">
+              
+                <input matInput type="email"  name="alert_respondent"  ngModel  [(ngModel)]="alert_respondent" required>
+    
+            </mat-form-field>
+        </div>    
+    </div>  
+  
+    <div fxLayout="row">
+        <div fxFlex="50%">
+            <span>Enable Access Control</span> 
+        </div>
+        <div fxFlex="50%">
+            <mat-button-toggle-group name="access" [(ngModel)]="access" class="btn">
+                <mat-button-toggle value="ON">ON</mat-button-toggle>
+                <mat-button-toggle value="OFF">OFF</mat-button-toggle>
+            
+            </mat-button-toggle-group>
+        </div>    
+    </div>  
+   
+         
+    
+
+</form>    
+<br>
+
+<div style="text-align: center;">
+<button mat-raised-button  (click)="onClicking(conForm)" color="primary">Save</button>
+</div>
+</div>
+
+
+ 

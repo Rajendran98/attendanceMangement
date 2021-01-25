@@ -1,0 +1,129 @@
+
+
+
+
+
+
+<div class="page">     
+    
+    
+    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="70">
+
+
+           
+
+            <br>
+            
+            <div fxLayout="row" style="height:12%">
+
+          
+
+                <div fxFlex="100%">
+                  <table >
+                      <col>
+                      <colgroup span="4"></colgroup>
+                      <tr>
+                          <th colspan="4" scope="colgroup">{{entries[0].name}}</th>
+                      </tr>
+                  
+                    
+                    <tr>
+                      <th>Emp Id</th>
+                      <td> <span>{{entries[0].id}}</span></td>
+                      <th>DOB</th>
+                      <td> <span>{{entries[0].id}}</span></td>
+                     
+                    </tr>
+                    <tr>
+                      <th>Designation</th>
+                      <td> <span>{{entries[0].designation}}</span></td>
+                      <th>Type</th>
+                      <td> <span>{{entries[0].type}}</span></td>
+                    </tr>
+                    <tr>
+                        <th>Department</th>
+                        <td> <span>{{entries[0].department}}</span></td>
+                        <th>Shift</th>
+                        <td> <span>{{entries[0].shift_start}}</span></td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td>{{entries[0].location}}</td>
+                        <th>Manager</th>
+                        <td>{{entries[0].id}}</td>
+                       
+                    </tr>
+                    <tr>
+                        <th>Mobile No</th>
+                        <td>{{entries[0].phone}}</td>
+                        <th>Email Id</th>
+                        <td>{{entries[0].email}}</td>
+                       
+                    </tr>
+                   
+                    <tr>
+                        <th>Enrolled On</th>
+                        <td>{{entries[0].timestamp}}</td>
+                        <th>Record Time</th>
+                        <td>Doe</td>
+                       
+                       
+                    </tr>
+                 
+                    <tr>
+                        <th>Last Record</th>
+                        <td>Doe</td>
+                        <th>Temperature</th>
+                        <td>{{entries[0].temperature}}</td>
+
+                    </tr>
+                  
+                  
+                  </table>
+                </div>  
+            </div>
+
+          
+
+
+
+           
+        </div>
+
+        
+
+
+
+        <!-- <div fxLayout="row"> -->
+        <div fxFlex="30">
+            <div fxLayout="row">
+                <div fxFlex="99%">
+                    <br>
+                    <br>
+                    
+
+
+                  
+                  <img src="../../../assets/Picture1.jpg" class="image">
+               
+
+
+                </div>
+            </div>
+
+
+            <br>
+
+
+        </div>
+
+        <!--</div>-->
+    </div>
+    
+
+
+</div>
+
+

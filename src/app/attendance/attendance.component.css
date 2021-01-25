@@ -1,0 +1,27 @@
+table{
+    width: 100%;
+   
+}
+td{
+    font-size: small;
+}
+.head{
+    text-align: center;
+}
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    table{
+        width: 100%;
+
+    }
+    td{
+        font-size: x-small;
+    }
+    .head{
+        font-size: x-small;
+        padding-top: 10px;
+    }
+    th.mat-header-cell:first-of-type{
+        padding-left: 0px;
+    }
+ 
+}

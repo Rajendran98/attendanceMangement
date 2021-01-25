@@ -1,0 +1,24 @@
+<h2 style="text-align: center;">Emergency</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="this.emergency == false">
+    <p style="text-align: center; font-size: 20px;">
+        Emergency Override: Activating this will unlock all access controlled doors enabling free movement of people. Confirm to proceed.
+    </p>
+</div>
+<div *ngIf="this.emergency == true">
+    <p style="text-align: center; font-size: 20px;">
+        Emergency Override: Emergency override is enabled and all access controlled doors are unlocked to enable free movement of people.
+    </p>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="this.emergency == false">
+    <button mat-raised-button color="warn" (click) = "Enable()">Enable</button>
+</div>
+<div style="text-align: center;" *ngIf="this.emergency == true">
+    <button mat-raised-button color="primary" (click) = "Disable()">Disable</button>
+</div>

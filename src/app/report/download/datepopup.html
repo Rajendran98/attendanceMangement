@@ -1,0 +1,19 @@
+<p>Select Date Range</p>
+<form #popupForm="ngForm" >
+<mat-form-field appearance="outline">
+    <mat-label>From</mat-label>
+    <input matInput [matDatepicker]="picker" name="fromdate" (focus)="picker.open()" [(ngModel)]="fromdate" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<mat-form-field appearance="outline">
+    <mat-label>To</mat-label>
+    <input matInput [matDatepicker]="picker1" name="todate" (focus)="picker1.open()" [(ngModel)]="todate" required>
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+<br>
+<div style="text-align: center;">
+<button mat-raised-button color="primary" (click) ="onsubmit(popupForm)">Submit</button>
+</div>
+</form>

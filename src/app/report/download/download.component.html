@@ -1,0 +1,40 @@
+<button mat-raised-button color="warn" (click)="goBack()">Back</button>
+<br>
+<table class="table">
+    <tr>
+        <th>
+            Daily Report
+        </th>
+        <th>
+            Periodic Report
+        </th>
+    </tr>
+    <tr>
+         <td>
+            <a href="../../../assets/Sample upload file .csv" style="color: orangered;" download> Daily Attendance Report</a>
+        </td>
+        <td (click)=" openDialog()">
+            Summary Report
+        </td>
+    </tr>
+    <tr>
+        <td> <a href="../../../assets/Sample upload file .csv" style="color: orangered;" download> Daily Late Comers Report</a></td>
+        <td (click)=" openDialog()">Late Comers Report</td>
+    </tr>
+    <tr>
+        <td><a href="../../../assets/Sample upload file .csv" style="color: orangered;" download>Employee Movement Report</a></td>
+        <td (click)=" openDialog()">Employee-wise Report</td>
+    </tr>
+    <tr>
+        <td><a href="../../../assets/Sample upload file .csv" style="color: orangered;" download>Summary Report</a></td>
+        <td (click)=" openDialog()">Over Stayer Report</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td (click)=" openDialog()">Absentees Report</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td (click)=" openDialog()">Movement Report</td>
+    </tr>
+</table>

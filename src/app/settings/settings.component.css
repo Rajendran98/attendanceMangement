@@ -1,0 +1,38 @@
+.set{width: 60%; position: relative; left: 20%;}
+
+  .panel .mat-expansion-panel-body{
+    background-color: skyblue;
+  }
+
+ h4{
+   text-align: center;
+ }
+
+.ten{
+  position: relative; left: 30%;
+}  
+.ten1{
+  position: relative; left: 34%;
+}  
+
+::ng-deep .mat-card{
+
+  border: 55px !important;
+
+  border: #000 !important;
+ }
+
+  @media only screen and (min-width: 280px) and (max-width: 599px) {
+    .set{
+      position: relative;
+      width: 100%;
+      left: 0%;
+    }
+    
+.ten{
+  position: relative; left: 0%;
+}  
+.ten1{
+  position: relative; left: 0%;
+}  
+  }

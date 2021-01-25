@@ -1,0 +1,35 @@
+<form #accessForm="ngForm" style="width:100%;height:100%; text-align: center;">
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Mac Address</mat-label>
+            <input matInput name="access_macaddress" placeholder="Mac Address" ngModel   [(ngModel)]="access_macaddress" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Device Name</mat-label>
+            <input matInput  name="access_devicename" placeholder="Device Name" ngModel  [(ngModel)]="access_devicename" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" >
+          <mat-label >Device Type</mat-label>
+          <input matInput  name="access_devicetype" placeholder="Device Type" ngModel  [(ngModel)]="access_devicetype" required>
+
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Location</mat-label>
+            <input matInput  name="access_location" placeholder="Location" ngModel  [(ngModel)]="access_location" required>
+
+        </mat-form-field>
+    </div>
+ 
+    <button mat-raised-button (click)="Access(accessForm)"  color="primary">
+        Save
+    </button>
+
+</form>

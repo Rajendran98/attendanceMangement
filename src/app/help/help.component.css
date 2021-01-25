@@ -1,0 +1,10 @@
+.who{
+    text-indent: 5em;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .who{
+        text-indent: 0em;
+        font-size: small;
+    }
+}

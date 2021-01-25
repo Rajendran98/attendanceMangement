@@ -1,0 +1,98 @@
+
+    <!-- <div class="tool" style="height: 100%;width:100%">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <img src="assets/SECQURIN.png" alt="logo" class="img1">
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div> -->
+<div>
+    <div style="height: 100%;width:100%">
+        <mat-sidenav-container class="sidenav-position" layout="row" position="start" color="accent">
+            <mat-sidenav [disableClose]="true" class="mat-nav-list disp" mode="side" opened role="navigation" position="start" [ngClass]="{ selectedSideNav : (this.headerFlag == true)}">
+                <mat-nav-list style="height: 88%;">
+                    <mat-nav-list>
+                        <a mat-list-item (click)="headerFlag = !headerFlag" class="icon_color">
+                            <mat-icon aria-label="close search">menu</mat-icon>
+                            <!-- <span  *ngIf="this.headerFlag==true">
+                                <img src="assets/SecqurAIse - Final-Logo.ico" alt="logo" style="width:100%;padding: 0%;margin:0%">
+                            </span>-->
+                        </a>
+                    </mat-nav-list>
+
+
+                    <!-- <mat-nav-list *ngIf="!this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/login' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>person_add</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">login</span>
+                        </a>
+                    </mat-nav-list> -->
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/report' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>screen_share</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Dashboard</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/summary' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>table_view</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Report</span>
+                        </a>
+                    </mat-nav-list>
+
+                 
+
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/attendance' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>supervisor_account</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Employees</span>
+                        </a>
+                    </mat-nav-list>
+
+                
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/settings' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>settings</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Settings</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/emergency' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>warning</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Emergency</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/whoami' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>person_add</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Who Am I?</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/account' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>person</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Account</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()">
+                        <a mat-list-item routerLink='/help' routerLinkActive="focused" class="icon_color">
+                            <mat-icon>help</mat-icon>
+                            <span *ngIf="this.headerFlag==true" class="icon_space">Help</span>
+                        </a>
+                    </mat-nav-list>
+                    <mat-nav-list *ngIf="this.authService.isUserLoggedIn()" style="position: absolute; bottom: 2%; width: 100%;">
+                        <a mat-list-item (click)="logout()" class="icon_color">
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span class="icon_space" *ngIf="this.headerFlag==true">LogOut</span>
+                        </a>
+                    </mat-nav-list>
+
+
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

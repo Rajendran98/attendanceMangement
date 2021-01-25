@@ -1,0 +1,45 @@
+<div class="mainpg">
+   
+  
+    <div class="login">
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email/Mobile No</mat-label>
+            <input (input)="this.errorMsg = false" matInput placeholder="Email/Mobile No" type="text"
+            [formControl]="loginForm.get('username')" [errorStateMatcher]="matcher">
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <mat-error *ngIf="loginForm.get('username').hasError('required')">
+              Email/Mobile No is <strong>required</strong>
+            </mat-error>
+          
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"
+            [formControl]="loginForm.get('password')" [errorStateMatcher]="matcher">
+            <mat-icon  matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="loginForm.get('password').hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+    
+       
+        
+        <div>
+            <button mat-raised-button color="primary" type="submit">Login</button>
+          
+        </div>
+      </form>
+
+      
+
+
+    </div>
+    <h4 class="tet">Please contact support if you have misplaced or forgotten the password</h4>
+</div>    

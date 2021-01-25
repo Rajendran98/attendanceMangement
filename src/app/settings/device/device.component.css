@@ -1,0 +1,10 @@
+.set{width: 60%; position: relative; left: 20%;}
+
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .set{
+      position: relative;
+      width: 100%;
+      left: 0%;
+    }
+}    

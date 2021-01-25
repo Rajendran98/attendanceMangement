@@ -1,0 +1,105 @@
+.mainpg{
+    width: 75%;
+    position: relative;
+    left: 20%;
+    overflow: hidden;
+   
+    
+}
+.btn{
+    float: left;
+    
+}
+span{
+    font-size: 22px;
+}
+
+.mar{
+  margin-bottom: 5px;
+}
+
+mat-button-toggle {
+   
+
+    width: auto;
+    height: 40px;
+  
+    font-size: 14px;
+  
+}
+
+.mat-button-toggle-checked{
+    background-color: #2979FF;
+    color: white;
+  }
+
+
+  
+::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: red!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: red!important;
+  
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+    color: red!important;
+    opacity: 0.8!important;
+  }
+  
+  
+  ::ng-deep .mat-input-element {
+    caret-color: red!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+    caret-color: red!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field-label {
+    color:white!important;
+  
+  }
+  
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: red!important;
+  }
+  
+  
+  ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: red!important;
+  }
+
+  @media only screen and (min-width: 280px) and (max-width: 599px) {
+      .mainpg{
+          width: 100%;
+          position: relative;
+          left: 0%;
+          margin-top: 10%;
+       
+      }
+      span{
+          font-size: x-small;
+      }
+
+      mat-button-toggle {
+   
+
+        width: auto;
+        height: 40px;
+      
+        font-size: 8px;
+      
+    }
+  }

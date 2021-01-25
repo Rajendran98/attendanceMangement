@@ -1,0 +1,112 @@
+.alig{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
+.switch{
+    position: relative;
+    left: 43%;
+
+}
+.tet{
+    position: relative;
+    top: 0%;
+    left: 32%;
+}
+
+.tet1{
+    position: relative;
+    top: 0%;
+    left: 43%;
+}
+
+table{
+    width: 100%;
+   
+}
+td{
+    font-size: small;
+}
+
+mat-sidenav-content {
+   fill: aliceblue;
+}
+
+/*
+.mat-drawer-container {
+    fill: white;
+}
+rect.c3-legend-item-event {
+    fill: whitesmoke;
+}
+
+::ng-deep .c3-chart-arc text{
+    fill: red !important;
+    color: purple;
+}
+.nocolor{
+    fill: transparent !important;
+}
+
+.c3-axis-y text {
+    fill: red;
+    color: purple;
+    font-size:12px;
+ }
+ .c3-axis-x text {
+     font-size:12px;
+     color: purple;
+     fill:purple;
+ }
+*/
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+
+    .mainpg{
+        font-size: x-small;
+    }
+    table{
+        width: 100%;
+        overflow-x: scroll;
+
+    }
+    td{
+        font-size: xx-small;
+    }
+
+    th{
+        font-size: xx-small;
+        width: 9%;
+    }
+   .switch{
+       position: relative;
+       left: 25%;
+   }
+   .tet{
+       position: relative;
+       top: 0%;
+       left: 0%;
+       font-size: xx-small;
+      
+     
+   }
+   .tet1{
+    position: relative;
+    left: 18%;
+    font-size: xx-small;
+    top: 0%;
+    }
+   .btn{
+    
+       font-size: xx-small;
+       text-align: center;
+   }
+
+
+    th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type{
+        padding-left: 0px;
+    }
+    th.mat-header-cell:first-of-type{
+        padding-left: 0px;
+    }
+ 
+}

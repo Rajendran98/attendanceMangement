@@ -1,0 +1,133 @@
+<style>
+.bg{
+
+    background-color: gray;
+    
+}
+
+::ng-deep .mat-dialog-container {
+    background-color: gray;
+}
+
+
+::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: red!important;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: red!important;
+
+}
+
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: red!important;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+  color: red!important;
+  opacity: 0.8!important;
+}
+
+
+::ng-deep .mat-input-element {
+  caret-color: red!important;
+}
+
+
+::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+  caret-color: red!important;
+}
+
+
+::ng-deep .mat-form-field-label {
+  color:white!important;
+
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: red!important;
+}
+
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: red!important;
+}
+</style>
+<div class="bg">
+<form #clusterForm="ngForm" style="width:100%;height:100%; text-align: center;">
+   
+    <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline"  >
+                <mat-label >IP Address</mat-label>
+                <input matInput  name="cluster_ip" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="cluster_ip" required>
+    
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+           
+            <mat-form-field appearance="outline" >
+                <mat-label >Device Name</mat-label>
+                <input matInput  name="cluster_device" placeholder="Device Name" ngModel  [(ngModel)]="cluster_device" required>
+    
+            </mat-form-field>
+        </div>    
+    </div>  
+
+   <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" >
+                <mat-label >User Id</mat-label>
+                <input matInput  name="cluster_userid" placeholder="User Id" ngModel  [(ngModel)]="cluster_userid" required>
+    
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+             <mat-form-field appearance="outline" >
+            <mat-label >Password</mat-label>
+            <input matInput type="password" name="cluster_password" placeholder="Password" ngModel  [(ngModel)]="cluster_password" required>
+
+        </mat-form-field>
+        </div>    
+    </div>  
+
+
+ <!--
+    <div>
+        <mat-form-field appearance="outline"  >
+            <mat-label >IP Address</mat-label>
+            <input matInput  name="cluster_ip" placeholder="IP Address" ngModel pattern="(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)_*){3}" [(ngModel)]="cluster_ip" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Device Name</mat-label>
+            <input matInput  name="cluster_device" placeholder="Device Name" ngModel  [(ngModel)]="cluster_device" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >User Id</mat-label>
+            <input matInput  name="cluster_userid" placeholder="User Id" ngModel  [(ngModel)]="cluster_userid" required>
+
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-label >Password</mat-label>
+            <input matInput type="password" name="cluster_password" placeholder="Password" ngModel  [(ngModel)]="cluster_password" required>
+
+        </mat-form-field>
+    </div>-->
+    <button mat-raised-button  (click)="Cluster(clusterForm)" color="primary">
+        Save
+    </button>
+
+</form>
+
+</div>

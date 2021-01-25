@@ -1,0 +1,221 @@
+@import "../../theme";
+$warn: map-get($app-theme, warn);
+$primary:map-get($app-theme, primary);
+$accent:map-get($app-theme, accent);
+.mat-nav-list {
+    background-color: mat-color($accent)
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.disp {
+    padding: 0%;
+    margin: 0%;
+}
+
+/*.tool {
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+
+.tool1 {
+    position: fixed;
+    top: 0%;
+    left: 85%;
+}
+
+.img1 {
+    width: 12%;
+    padding: 0%;
+    padding-bottom: 20px;
+    margin: 0%
+}
+
+.img2 {
+    width: 15%;
+    position: relative;
+    left: 74%;
+    padding-bottom: 20px;
+}*/
+
+.sidenav-position {
+    position: absolute;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    fill: aliceblue;
+}
+
+.focused {
+    background-color: mat-color($primary)!important;
+}
+
+.warnfocused {
+    background-color: mat-color($primary)!important;
+}
+
+ ::ng-deep .focused .mat-badge-content {
+    background-color: white;
+    color: mat-color($primary)!important;
+}
+
+
+md-sidenav-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidenav-container .mat-drawer-content {
+    margin-left: 0% !important;
+}
+
+mat-sidenav-content.mat-drawer-content {
+    z-index: initial !important;
+}
+
+.selectedSideNav {
+    width: 12%;
+}
+
+md-sidenav-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.matdrawer {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    z-index: 3;
+}
+
+mat-sidenav-content.mat-drawer-content {
+    z-index: initial !important;
+    margin-left: 60px !important;
+}
+
+.selected {
+    // color:red;
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+    color: white;
+}
+
+.logout {
+    position: absolute;
+    top: 92%;
+}
+
+.mat-drawer.mat-drawer-side {
+    z-index: 101 !important;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.icon_color {
+    color: white !important
+}
+
+.icon_space {
+    padding: 1%;
+    margin: 1%
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+   /* .img1 {
+        position: relative;
+        left: 0%;
+        width: 30%;
+        height: 50%;
+    }
+    .img2 {
+        position: relative;
+        left: 37%;
+        width: 40%;
+        height: 70%;
+        padding-top: 5px;
+    }*/
+    .selectedSideNav {
+        width: 40%;
+    }
+}
+
+// ::ng-deep .mat-drawer-inner-container{
+// width: 56% !important;
+// }

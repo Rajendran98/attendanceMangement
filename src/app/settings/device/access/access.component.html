@@ -1,0 +1,23 @@
+<button mat-raised-button color="primary" (click)="goBack()" style="margin-top: 5px;">Back</button>
+<div class="fact">
+<div *ngFor="let item of ClusterArray let index as index">
+    <div fxLayout="row">
+      <div fxFlex="70%">
+        <h4>Device Type : {{item.access_devicetype}}</h4>
+        <h4>Device Name : {{item.access_devicename}}</h4>
+        <h4>Mac Address : {{item.access_macaddress}}</h4>
+      </div>
+      <div fxFlex="30%">
+        <br>
+        <button mat-raised-button (click)="onRemoveCluster(index)" color="primary">
+          Remove
+      </button>
+      </div>
+    </div> 
+    <hr>
+     
+ 
+
+  </div>
+<button mat-raised-button color="primary" (click)="adddevice()" class="btn">Add</button>
+</div>
